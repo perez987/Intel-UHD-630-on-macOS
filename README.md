@@ -104,4 +104,4 @@ with:
 
 In this way, Intel UHD 630 is well installed and works fine on macOS.
 
-![Intel UHD 630](Intel630.png?raw=true)
+![Intel UHD 630](intel630.png?raw=true)
