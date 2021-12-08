@@ -88,19 +88,19 @@ This card can also be configured to be the main or single one, so that it output
 			</dict>
 ```
 
-If you have KP or black screen when macOS wakes from sleep, you have to replace hda-gfx property with No-hda-gfx, this usually fixes those KPs but audio is lost through HDMI. Replace these 2 lines:
+If you have KP or black screen when macOS wakes from sleep, you have to replace hda-gfx property with No-hda-gfx, this usually fixes those KPs but audio is lost through HDMI. Replace:
 
 ```
 	    <key>hda-gfx</key>
 	    <string>onboard-1</string>
 ```
 
-with these other 2:
+with:
 
 ```
 	    <key>No-hda-gfx</key>
 	    <data>AAAAAAAAAAA=</data>
 ```
 
-In this way, Intel UHD 630 is well installed and works fine in macOS.
+In this way, Intel UHD 630 is well installed and works fine on macOS.
 
