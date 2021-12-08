@@ -46,7 +46,7 @@ You have to add in DeviceProperties section of OC:
 </dict>
 ```
 
-This code has data values in Base64, in plist editors they can be seen as hexadecimal values although with inverted bytes (reverse byte order), e.g. `AwCRPg==` in Base64 (_AAPL,ig-platform-id_) = `0300913E` in hexadecimal.
+This code has data values in Base64, in plist editors they can be seen as hexadecimal, e.g. `AwCRPg==` in Base64 (_AAPL,ig-platform-id_) = `0300913E` in hexadecimal.
 
 With these changes you can boot from a dGPU with the iGPU well installed. To check if the VDA Decoder function is activated you can see it in Hackintool app (Fully Supported or Failed in the first System tab).
 
