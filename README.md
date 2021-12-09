@@ -61,7 +61,7 @@ This card can also be configured to be the main or single one, so that it output
 - Add in `config.plist >> DeviceProperties >> Add` the code below (note: `BwCbPg==` is `07009B3E` in hexadecimal):
 
 ```
-<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+	<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 	<dict>
 		<key>AAPL,ig-platform-id</key>
 		<data>BwCbPg==</data>
