@@ -52,7 +52,7 @@ With these changes you can boot from a dGPU with the iGPU well installed. To che
 
 ## iGPU as main card
 
-This card can also be configured to be the main or single one, so that it outputs a signal to the monitor and also encodes video. Here's what to do to make it work like this.
+This card can also be configured to be the main or single one, so that it outputs a signal to the monitor and also encodes video. Here's what to do.
 
 - Enable it on the motherboard as main card: Initial Display Output `IGFX` instead of `PCIe 1 Slot` (this would be the final step)
 - Lilu and WhatEverGreen properly installed
