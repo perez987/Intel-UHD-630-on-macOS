@@ -39,11 +39,11 @@ This is important when using the iGPU as a main or single card but not when usin
 You have to add in DeviceProperties section of OC:
 
 ```
-<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-<dict>
-	<key>AAPL,ig-platform-id</key>
-	<data>AwCRPg==</data>
-</dict>
+	<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+	<dict>
+		<key>AAPL,ig-platform-id</key>
+		<data>AwCRPg==</data>
+	</dict>
 ```
 
 This code has data values in Base64, in plist editors they can be seen as hexadecimal, e.g. `AwCRPg==` in Base64 (_AAPL,ig-platform-id_) = `0300913E` in hexadecimal.
