@@ -36,7 +36,7 @@ This is important when using the iGPU as a main or single card but not when usin
 - Lilu and WhatEverGreen properly installed.
 - SMBIOS iMac19.1
 
-You have to add in DeviceProperties section of OC:
+You have to add in `DeviceProperties >> Add`:
 
 ```
 	<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
