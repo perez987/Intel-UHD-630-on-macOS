@@ -60,6 +60,32 @@ This card can also be configured to be the main or single one, so that it output
 - Add in config.plist boot-args: `igfxonln=1`
 - Add in `config.plist >> DeviceProperties >> Add` the code below (note: `BwCbPg==` is `07009B3E` in hexadecimal):
 
+   <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+	<dict>
+		<key>AAPL,ig-platform-id</key>
+		<data>BwCbPg==</data>
+		<key>framebuffer-patch-enable</key>
+		<data>AQAAAA==</data>
+		<key>framebuffer-con0-enable</key>
+		<data>AQAAAA==</data>
+		<key>framebuffer-con1-enable</key>
+		<data>AQAAAA==</data>
+		<key>framebuffer-con2-enable</key>
+		<data>AQAAAA==</data>
+		<key>framebuffer-con0-alldata</key>
+		<data>AQAJAAAEAADHAwAA</data>
+		<key>framebuffer-con1-alldata</key>
+		<data>AgAKAAAEAADHAwAA</data>
+		<key>framebuffer-con2-alldata</key>
+		<data>AwQIAAAIAADHAwAA</data>
+		<key>framebuffer-stolenmem</key>
+		<data>AAAwAQ==</data>
+		<key>hda-gfx</key>
+		<string>onboard-1</string>
+		<key>name</key>
+		<string>Intel UHD Graphics 630</string>
+	</dict>
+
 If you have KP or black screen when macOS wakes from sleep, you have to replace hda-gfx property with No-hda-gfx, this usually fixes those KPs but audio is lost through HDMI. Replace:
 
 ```
