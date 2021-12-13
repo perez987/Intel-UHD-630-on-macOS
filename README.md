@@ -1,8 +1,8 @@
-# Intel UHD Graphics 630 Coffee Lake on macOS
+# Intel UHD Graphics 630 Coffee Lake R on macOS
 
 ![Intel 630](i9.png?raw=true)
 
-## How to set the integrated graphics card Intel UHD Graphics 630 Coffee Lake (i7-9700) in headless mode (no cable to monitor) to be used by macOS (Catalina, Big Sur or Monterey) in computing and video encoding tasks or setting it as the main card.
+## How to set the integrated graphics card Intel UHD Graphics 630 Coffee Lake R (i7-9700) in headless mode (no cable to monitor) to be used by macOS (Catalina, Big Sur or Monterey) in computing and video encoding tasks or setting it as the main card.
 
 **Note**: based on
 
@@ -39,10 +39,12 @@ This is important when using the iGPU as a main or single card but not when usin
 
 ## Headless mode
 
-- iGPU and dGPU must be enabled in BIOS with dGPU as primary.
-- There should be no cable between iGPU HDMI port and any type of display.
-- Lilu and WhatEverGreen properly installed.
-- SMBIOS iMac19.1
+<table>
+       <tr><td>iGPU and dGPU must be enabled in BIOS with dGPU as primary</td></tr>
+       <tr><td>There should be no cable between iGPU HDMI port and any type of display</td></tr>
+       <tr><td>Lilu and WhatEverGreen properly installed</td></tr>
+       <tr><td>SMBIOS iMac19.1</td></tr>
+</table>
 
 You have to add in `DeviceProperties >> Add`:
 
