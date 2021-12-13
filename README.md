@@ -2,13 +2,15 @@
 
 ![Intel 630](i9.jpg?raw=true)
 
-**How to set the integrated graphics card Intel UHD Graphics 630 Coffee Lake (i7-9700) in headless mode (no cable to monitor) to be used by macOS (Catalina, Big Sur or Monterey) in computing and video encoding tasks, or setting it as the main card connected to monitor.**
+## How to set the integrated graphics card Intel UHD Graphics 630 Coffee Lake (i7-9700) in headless mode (no cable to monitor) to be used by macOS (Catalina, Big Sur or Monterey) in computing and video encoding tasks, or setting it as the main card connected to monitor.
 
 **Note**: based on
 
 - `[GUIDE] General Framebuffer Patching Guide (HDMI Black Screen Problem)` by _CaseySJ_ in tonymacx86 forum
 - Framebuffer patch feature of _headkaze_'s Hackintool app
 - Desktop Coffee Lake part of the OpenCore Dortania's guide.
+
+## Preface
 
 Macs with an integrated graphics card (iGPU) and a dedicated one (dGPU) use the iGPU for video encoding and decoding tasks. When building a Hackintosh with both types of GPU we can find that, if the iGPU is not properly installed, video encoding can fail. When this happens, we must configure the iGPU as _headless mode_ (it is so called when it is enabled but no cable to monitor) so that the dGPU acts as main card but the iGPU is available for encoding / decoding video.
 
