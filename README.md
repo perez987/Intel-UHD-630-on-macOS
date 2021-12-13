@@ -42,7 +42,7 @@ This is important when using the iGPU as a main or single card but not when usin
 - iGPU and dGPU must be enabled in BIOS with dGPU as primary
 - There should be no cable between iGPU HDMI port and any type of display
 - Lilu and WhatEverGreen properly installed
-- >SMBIOS iMac19.1.
+- SMBIOS iMac19.1.
 
 You have to add in `DeviceProperties >> Add`:
 
