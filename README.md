@@ -21,15 +21,19 @@ iGPU setting depends on 2 factors:
 
 My PC has a Z390 Aorus Elite board with an Intel 9th gen. CPU (Coffee Lake Refresh, it is configured as Coffee Lake) with Intel UHD Graphics 630:
 
-- PCI path is PciRoot(0x0)/Pci(0x2,0x0)
-- Plattorm ID is 3E9B0007
-- Device ID it is 3E910000.
+<table>
+       <tr><td>PCI path is PciRoot(0x0)/Pci(0x2,0x0)</td></tr>
+       <tr><td>Plattorm ID is 3E9B0007</td></tr>
+       <tr><td>Device ID it is 3E910000</td></tr>
+</table>
 
 On this board there is only one HDMI v1.4 connector for the iGPU, it corresponds to index 3 in the theoretical list of 3 internal connectors this iGPU can have:
 
-- Index 1, BusID 0x00, Type HDMI (type does not matter on this port)
-- Index 2, BusID 0x00, Type HDMI (type does not matter on this port)
-- Index 3, BusID 0x04, Type HDMI (this is the active port, the only physical one, type is HDMI).
+<table>
+       <tr><td>Index 1, BusID 0x00, Type HDMI (type does not matter on this port)</td></tr>
+       <tr><td>Index 2, BusID 0x00, Type HDMI (type does not matter on this port)</td></tr>
+       <tr><td>Index 3, BusID 0x04, Type HDMI (this is the active port, the only physical one, type is HDMI)</td></tr>
+</table>
 
 This is important when using the iGPU as a main or single card but not when using it in headless mode.
 
