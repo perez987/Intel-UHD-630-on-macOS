@@ -39,12 +39,10 @@ This is important when using the iGPU as a main or single card but not when usin
 
 ## Headless mode
 
-<table>
-       <tr><td>iGPU and dGPU must be enabled in BIOS with dGPU as primary</td></tr>
-       <tr><td>There should be no cable between iGPU HDMI port and any type of display</td></tr>
-       <tr><td>Lilu and WhatEverGreen properly installed</td></tr>
-       <tr><td>SMBIOS iMac19.1</td></tr>
-</table>
+- iGPU and dGPU must be enabled in BIOS with dGPU as primary
+- There should be no cable between iGPU HDMI port and any type of display
+- Lilu and WhatEverGreen properly installed
+- >SMBIOS iMac19.1.
 
 You have to add in `DeviceProperties >> Add`:
 
