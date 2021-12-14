@@ -1,8 +1,9 @@
 # Intel UHD Graphics 630 Coffee Lake R on macOS
 
-![Intel 630](i9.png?raw=true)
-
-## How to set the integrated graphics card Intel UHD Graphics 630 Coffee Lake R (i7-9700) in headless mode (no cable to monitor) to be used by macOS (Catalina, Big Sur or Monterey) in computing and video encoding tasks or setting it as the main card.
+<table>
+       <tr><td align=center><img src=i9.png></td></tr>
+       <tr><td>How to set the integrated graphics card Intel UHD Graphics 630 Coffee Lake R (i7-9700) in headless mode (no cable to monitor) to be used by macOS (Catalina, Big Sur or Monterey) in computing and video encoding tasks or setting it as the main card</td></tr>
+</table>
 
 **Note**: based on
 
@@ -16,8 +17,10 @@ Macs with an integrated graphics card (iGPU) and a dedicated one (dGPU) use the 
 
 iGPU setting depends on 2 factors:
 
-- motherboard because manufacturer can put 1, 2 or 3 HDMI connectors for the iGPU on the back pannel
-- Intel processor generation, different Intel generations have different iGPU chips.
+<table>
+       <tr><td>motherboard because manufacturer can put 1, 2 or 3 HDMI connectors for the iGPU on the back pannel</td></tr>
+       <tr><td>Intel processor generation, different Intel generations have different iGPU</td></tr>
+</table>
 
 My PC has a Z390 Aorus Elite board with an Intel 9th gen. CPU (Coffee Lake Refresh, it is configured as Coffee Lake) with Intel UHD Graphics 630:
 
