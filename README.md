@@ -18,7 +18,7 @@ Macs with an integrated graphics card (iGPU) and a dedicated one (dGPU) use the 
 iGPU setting depends on 2 factors:
 
 <table>
-       <tr><td>motherboard because manufacturer can put 1, 2 or 3 HDMI connectors for the iGPU on the back pannel</td></tr>
+       <tr><td>Motherboard because manufacturer can put 1, 2 or 3 HDMI connectors for the iGPU on the back pannel</td></tr>
        <tr><td>Intel processor generation, different Intel generations have different iGPU</td></tr>
 </table>
 
@@ -59,7 +59,7 @@ You have to add in `DeviceProperties >> Add`:
 
 This code has data values in Base64, in plist editors they can be seen as hexadecimal, e.g. `AwCRPg==` in Base64 (_AAPL,ig-platform-id_) = `0300913E` in hexadecimal.
 
-With these changes you can boot from a dGPU with the iGPU well installed. To check if the VDA Decoder function is activated you can see it in Hackintool app (Fully Supported or Failed in the first System tab).
+With these changes you can boot from a dGPU with the iGPU well installed. To check if the VDA Decoder function is activated you can get Hackintool app (_Fully Supported_ or _Failed_ in the first System tab).
 
 ## iGPU as main card
 
