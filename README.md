@@ -2,7 +2,7 @@
 
 <table>
        <tr><td align=center><img src=i9.png></td></tr>
-       <tr><td>How to set the integrated graphics card Intel UHD Graphics 630 Coffee Lake R (i7-9700) in headless mode (no cable to monitor) to be used by macOS (Catalina, Big Sur or Monterey) in computing and video encoding tasks or setting it as the main card</td></tr>
+       <tr><td><b>How to set the integrated graphics card Intel UHD Graphics 630 Coffee Lake R (i7-9700) in headless mode (no cable to monitor) to be used by macOS (Catalina, Big Sur or Monterey) in computing and video encoding tasks or setting it as the main card</b></td></tr>
 </table>
 
 **Note**: based on
