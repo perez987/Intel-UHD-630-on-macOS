@@ -9,7 +9,7 @@
 
 - `[GUIDE] General Framebuffer Patching Guide (HDMI Black Screen Problem)` by _CaseySJ_ in tonymacx86 forum
 - Framebuffer patch feature of _headkaze_'s Hackintool app
-- Desktop Coffee Lake part of the OpenCore Dortania's guide.
+- Desktop Coffee Lake chapter of the OpenCore Dortania's guide.
 
 ## Preface
 
