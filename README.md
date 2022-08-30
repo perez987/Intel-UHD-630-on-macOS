@@ -27,7 +27,6 @@ My PC has a Z390 Aorus Elite board with an Intel 9th gen. CPU (Coffee Lake Refre
 <table>
        <tr><td>PCI path is PciRoot(0x0)/Pci(0x2,0x0)</td></tr>
        <tr><td>Plattorm ID is 3E9B0007</td></tr>
-       <tr><td>Device ID it is 3E910000</td></tr>
 </table>
 
 On this board there is only one HDMI v1.4 connector for the iGPU, it corresponds to index 3 in the theoretical list of 3 internal connectors this iGPU can have:
