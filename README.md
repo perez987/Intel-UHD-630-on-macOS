@@ -72,7 +72,7 @@ With these changes you can boot from a dGPU with the iGPU well installed. To che
 
 Notes:
 
-- `device-id=9B3E000` to be displayed as `Intel UHD Graphics 630` instead of `Kabylake Unknown
+- `device-id=9B3E000` to be displayed as `Intel UHD Graphics 630` instead of `Kabylake Unknown`
 - `enable-metal=01` to enable Metal 3 in Ventura
 - `force-online=01` to force online status on all displays (mandatory)
 - `igfxfw=02`to force loading of Apple GuC firmware (improves IGPU performance)
