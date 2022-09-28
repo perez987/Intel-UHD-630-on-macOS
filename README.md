@@ -81,7 +81,7 @@ Notes:
 <details>
 <summary>Image: iGPU as secondary card</summary>
 <br>
-<img src="iGPU as main card.png">
+<img src="img/iGPU as main card.png">
 </details>
 
 ## iGPU as main card
@@ -146,7 +146,7 @@ In this way, Intel UHD 630 is well installed and works fine on macOS.
 <details>
 <summary>Image: iGPU as main card</summary>
 <br>
-<img src="iGPU as main card.png">
+<img src="img/iGPU as main card.png">
 </details>
 
 If you have KP or black screen when macOS wakes from sleep, you have to replace hda-gfx property with No-hda-gfx, this usually fixes those KPs but audio is lost through HDMI. Replace:
