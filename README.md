@@ -81,7 +81,7 @@ Notes:
 <details>
 <summary>Image: iGPU as secondary card</summary>
 <br>
-<img src="img/iGPU as main card.png">
+<img src="img/iGPU as secondary card.png">
 </details>
 
 ## iGPU as main card
