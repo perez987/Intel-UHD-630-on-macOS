@@ -49,21 +49,21 @@ This is important when using the iGPU as a main or single card but not when usin
 You have to add in `DeviceProperties >> Add`:
 
 ``` xml
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>AwCRPg==</data>
-				<key>device-id</key>
-				<data>mz4AAA==</data>
-				<key>enable-metal</key>
-				<data>AQAAAA==</data>
-				<key>igfxfw</key>
-				<data>AgAAAA==</data>
-				<key>force-online</key>
-				<data>AQAAAA==</data>
-				<key>rps-control</key>
-				<data>AQAAAA==</data>
-			</dict>
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+<dict>
+	<key>AAPL,ig-platform-id</key>
+	<data>AwCRPg==</data>
+	<key>device-id</key>
+	<data>mz4AAA==</data>
+	<key>enable-metal</key>
+	<data>AQAAAA==</data>
+	<key>igfxfw</key>
+	<data>AgAAAA==</data>
+	<key>force-online</key>
+	<data>AQAAAA==</data>
+	<key>rps-control</key>
+	<data>AQAAAA==</data>
+</dict>
 ```
 
 This code has data values in Base64, in plist editors they can be seen as hexadecimal, e.g. `AwCRPg==` in Base64 (_AAPL,ig-platform-id_) = `0300913E` in hexadecimal.
@@ -94,51 +94,51 @@ This card can also be configured to be the main or single one, so that it output
 - Add in `config.plist >> DeviceProperties >> Add` the code below (note: `BwCbPg==` is `07009B3E` in hexadecimal):
 
 ``` xml
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>BwCbPg==</data>
-				<key>device-id</key>
-				<data>mz4AAA==</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
-				<key>enable-hdmi20</key>
-				<data>AQAAAA==</data>
-				<key>enable-metal</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-busid</key>
-				<data>AAAAAA==</data>
-				<key>framebuffer-con0-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-con1-busid</key>
-				<data>AAAAAA==</data>
-				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-con2-busid</key>
-				<data>BAAAAA==</data>
-				<key>framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-con2-type</key>
-				<data>AAgAAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>igfxfw</key>
-				<data>AgAAAA==</data>
-				<key>force-online</key>
-				<data>AQAAAA==</data>
-				<key>rps-control</key>
-				<data>AQAAAA==</data>
-			</dict>
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+<dict>
+	<key>AAPL,ig-platform-id</key>
+	<data>BwCbPg==</data>
+	<key>device-id</key>
+	<data>mz4AAA==</data>
+	<key>device_type</key>
+	<string>VGA compatible controller</string>
+	<key>enable-hdmi20</key>
+	<data>AQAAAA==</data>
+	<key>enable-metal</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con0-busid</key>
+	<data>AAAAAA==</data>
+	<key>framebuffer-con0-enable</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con0-pipe</key>
+	<data>EgAAAA==</data>
+	<key>framebuffer-con1-busid</key>
+	<data>AAAAAA==</data>
+	<key>framebuffer-con1-enable</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con1-pipe</key>
+	<data>EgAAAA==</data>
+	<key>framebuffer-con2-busid</key>
+	<data>BAAAAA==</data>
+	<key>framebuffer-con2-enable</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-con2-pipe</key>
+	<data>EgAAAA==</data>
+	<key>framebuffer-con2-type</key>
+	<data>AAgAAA==</data>
+	<key>framebuffer-patch-enable</key>
+	<data>AQAAAA==</data>
+	<key>framebuffer-stolenmem</key>
+	<data>AAAwAQ==</data>
+	<key>hda-gfx</key>
+	<string>onboard-1</string>
+	<key>igfxfw</key>
+	<data>AgAAAA==</data>
+	<key>force-online</key>
+	<data>AQAAAA==</data>
+	<key>rps-control</key>
+	<data>AQAAAA==</data>
+</dict>
 ```
 
 In this way, Intel UHD 630 is well installed and works fine on macOS.
@@ -149,16 +149,16 @@ In this way, Intel UHD 630 is well installed and works fine on macOS.
 <img src="img/iGPU as main card.png">
 </details>
 
-If you have KP or black screen when macOS wakes from sleep, you have to replace hda-gfx property with No-hda-gfx, this usually fixes those KPs but audio is lost through HDMI. Replace:
+**Note**: If you have KP or black screen when macOS wakes from sleep, you have to replace hda-gfx property with No-hda-gfx, this usually fixes those KPs but audio is lost through HDMI. Replace:
 
 ``` xml
-	    	<key>hda-gfx</key>
-	    	<string>onboard-1</string>
+<key>hda-gfx</key>
+<string>onboard-1</string>
 ```
 
 with:
 
 ``` xml
-	    	<key>No-hda-gfx</key>
-	    	<data>AAAAAAAAAAA=</data>
+<key>No-hda-gfx</key>
+<data>AAAAAAAAAAA=</data>
 ```
