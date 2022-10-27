@@ -48,7 +48,7 @@ This is important when using the iGPU as a main or single card but not when usin
 
 You have to add in `DeviceProperties >> Add`:
 
-```
+``` xml
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
@@ -93,7 +93,7 @@ This card can also be configured to be the main or single one, so that it output
 - SMBIOS iMac19.1
 - Add in `config.plist >> DeviceProperties >> Add` the code below (note: `BwCbPg==` is `07009B3E` in hexadecimal):
 
-```
+``` xml
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
