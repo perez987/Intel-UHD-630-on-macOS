@@ -151,14 +151,14 @@ In this way, Intel UHD 630 is well installed and works fine on macOS.
 
 If you have KP or black screen when macOS wakes from sleep, you have to replace hda-gfx property with No-hda-gfx, this usually fixes those KPs but audio is lost through HDMI. Replace:
 
-```
+``` xml
 	    	<key>hda-gfx</key>
 	    	<string>onboard-1</string>
 ```
 
 with:
 
-```
+``` xml
 	    	<key>No-hda-gfx</key>
 	    	<data>AAAAAAAAAAA=</data>
 ```
