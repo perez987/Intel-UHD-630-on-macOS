@@ -166,6 +166,6 @@ with:
 ```
 **Note about QEMU**
 
-If macOS is being installed in a QEMU virtual machine, the primary card in BIOS must be set to dGPU. Otherwise `vesafb` grabs the iGPU which, (due to a memory allocation conflict), results in a long delay on startup/shutdown and multi-gigabyte logs.
+If macOS is being installed in a QEMU virtual machine, the primary card in BIOS must be set to dGPU. Otherwise `vesafb` grabs the iGPU which, due to a memory allocation conflict, results in a long delay on startup/shutdown and multi-gigabyte logs.
 
 If `vga=off` is added to grub, then the card is not claimed, however it also does not work (blank screen).
