@@ -70,7 +70,6 @@ Notes:
 - `device-id=9B3E000` to be displayed as `Intel UHD Graphics 630` instead of `Kabylake Unknown` (optional)
 - `enable-metal=01` to enable Metal 3 in Ventura (recommendable on macOS 13).
 
-
 <details>
 <summary>Image: iGPU as secondary card</summary>
 <br>
@@ -141,8 +140,6 @@ In this way, Intel UHD 630 is well installed and works fine on macOS.
 <br>
 <img src="img/iGPU as main card.png">
 </details>
-
----
 
 **Note about igfxfw and rps-control** (thanks [5T33Z0](https://github.com/5T33Z0))
 
