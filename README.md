@@ -130,6 +130,10 @@ This card can also be configured to be the main or single one, so that it output
 </dict>
 ```
 
+Note:
+
+- `force-online=01` is mandatory, to force online status on all displays.
+
 In this way, Intel UHD 630 is well installed and works fine on macOS.
 
 <details>
