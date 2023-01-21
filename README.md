@@ -154,7 +154,7 @@ Recommendations:
 - `igfxfw` takes precedence over `igfxrpsc` when both are set
 - Boards supporting Intel ME 12 and newer can try `igfxfw=2`
 - For boards with older chipsets, RPS-Control is an option
-- There are comments of OC developers saying that `rps-control` is better than `igfxfw` (Big Sur an newer) because of the bug that seems to be in Apple GUC.
+- There are comments of OC developers saying that `rps-control` is better than `igfxfw` (Big Sur and newer) because of the bug that seems to be in Apple GUC.
 
 **Note about KP waking from sleep**
 
