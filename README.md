@@ -144,7 +144,7 @@ In this way, Intel UHD 630 is well installed and works fine on macOS.
 
 ---
 
-**Note about igfxfw and rps-control** (thanks @5T33Z0)
+**Note about igfxfw and rps-control** (thanks [5T33Z0](https://github.com/5T33Z0))
 
 Many Coffee Lake iGPUs work fine without loading Apple GUC firmware or enabling RPS Control. But those who have graphical issues (low max frequency, fixed frequency that does not vary, screen glitches, etc.) can play with 2 available properties:
 
