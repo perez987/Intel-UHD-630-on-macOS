@@ -57,12 +57,6 @@ You have to add in `DeviceProperties >> Add`:
 	<data>mz4AAA==</data>
 	<key>enable-metal</key>
 	<data>AQAAAA==</data>
-	<key>igfxfw</key>
-	<data>AgAAAA==</data>
-	<key>force-online</key>
-	<data>AQAAAA==</data>
-	<key>rps-control</key>
-	<data>AQAAAA==</data>
 </dict>
 ```
 
@@ -72,11 +66,10 @@ With these changes you can boot from a dGPU with the iGPU well installed. To che
 
 Notes:
 
-- `device-id=9B3E000` to be displayed as `Intel UHD Graphics 630` instead of `Kabylake Unknown`
-- `enable-metal=01` to enable Metal 3 in Ventura
-- `force-online=01` to force online status on all displays (mandatory)
-- `igfxfw=02`to force loading of Apple GuC firmware (improves IGPU performance)
-- `rps-control=01` to enable RPS control patch (improves IGPU performance).
+- `AAPL,ig-platform-id=0300913E` is mandatory, to detect the iGPU as Coffee Lake
+- `device-id=9B3E000` to be displayed as `Intel UHD Graphics 630` instead of `Kabylake Unknown` (optional)
+- `enable-metal=01` to enable Metal 3 in Ventura (recommendable on macOS 13).
+
 
 <details>
 <summary>Image: iGPU as secondary card</summary>
@@ -132,11 +125,7 @@ This card can also be configured to be the main or single one, so that it output
 	<data>AAAwAQ==</data>
 	<key>hda-gfx</key>
 	<string>onboard-1</string>
-	<key>igfxfw</key>
-	<data>AgAAAA==</data>
 	<key>force-online</key>
-	<data>AQAAAA==</data>
-	<key>rps-control</key>
 	<data>AQAAAA==</data>
 </dict>
 ```
@@ -151,7 +140,25 @@ In this way, Intel UHD 630 is well installed and works fine on macOS.
 
 ---
 
-**Note**: If you have KP or black screen when macOS wakes from sleep, you have to replace hda-gfx property with No-hda-gfx, this usually fixes those KPs but audio through HDMI is lost. Replace:
+**Note about igfxfw and rps-control** (thanks @5T33Z0)
+
+Many Coffee Lake iGPUs work fine without loading Apple GUC firmware or enabling RPS Control. But those who have graphical issues (low max frequency, fixed frequency that does not vary, screen glitches, etc.) can play with 2 available properties:
+
+- Apple GUC (disabled by default): it can be enabled by `igfxfw` property (02 as Data) or `igfxfw=2` boot arg. It forces loading of Apple Graphics Unit Control (GUC) firmware (graphics accelerator uses Apple firmware scheduler). It improves Intel Quick Sync Video and iGPU performance. Ir requires chipset supporting Intel Management Engine v12 or newer (H310, C246, B360, H370, Q370, Z390, Z490, etc.). It's buggy and not advisable to use. Should be tested on a case by case basis.
+- RPS Control (disabled by default): it can be enabled by `rps-control` property (01 as Data) or `igfxrpsc=2` boot arg. It enables RPS control patch (graphics accelerator uses host preemptive scheduler). Improves iGPU performance on Kaby Lake and newer using older chipsets without Intel Management Engine v12 support (Z370 and others). `rps-control`property was enabled in WhateverGreen until macOS 10.15.6, in this version it had major issues and, since then, WhateverGreen has disabled it by default.
+
+Recommendations:
+
+- If the iGPU has normal frequencies and power consumption for that model and the screen works fine >> it is not necessary to use any of the 2 settings
+- Both should not be used at the same time because they are based on different modes of operation
+- `igfxfw` takes precedence over `igfxrpsc` when both are set
+- Boards supporting Intel ME 12 and newer can try `igfxfw=2`
+- For boards with older chipsets, RPS-Control is an option
+- There are comments of OC developers saying that `rps-control` is better than `igfxfw` (Big Sur an newer) because of the bug that seems to be in Apple GUC.
+
+**Note about KP waking from sleep**
+
+If you have KP or black screen when macOS wakes from sleep, you have to replace `hda-gfx` property with `No-hda-gfx`, this usually fixes those KPs but audio through HDMI is lost. Replace:
 
 ``` xml
 <key>hda-gfx</key>
@@ -164,6 +171,7 @@ with:
 <key>No-hda-gfx</key>
 <data>AAAAAAAAAAA=</data>
 ```
+
 **Note about QEMU**
 
 If macOS is being installed in a QEMU virtual machine, the primary card in BIOS must be set to dGPU. Otherwise `vesafb` grabs the iGPU which, due to a memory allocation conflict, results in a long delay on startup/shutdown and multi-gigabyte logs.
