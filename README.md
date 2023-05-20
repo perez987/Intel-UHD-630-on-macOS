@@ -146,14 +146,14 @@ In this way, Intel UHD 630 is well installed and works fine on macOS.
 Many Coffee Lake iGPUs work fine without loading Apple GUC firmware or enabling RPS Control. But those who have graphical issues (low max frequency, fixed frequency that does not vary, screen glitches, etc.) can play with 2 available properties:
 
 - Apple GUC (disabled by default): it can be enabled by `igfxfw` property (02 as Data) or `igfxfw=2` boot arg. It forces loading of Apple Graphics Unit Control (GUC) firmware (graphics accelerator uses Apple firmware scheduler). It improves Intel Quick Sync Video and iGPU performance. Ir requires chipset supporting Intel Management Engine v12 or newer (H310, C246, B360, H370, Q370, Z390, Z490, etc.). It's buggy and not advisable to use. Should be tested on a case by case basis.
-- RPS Control (disabled by default): it can be enabled by `rps-control` property (01 as Data) or `igfxrpsc=2` boot arg. It enables RPS control patch (graphics accelerator uses host preemptive scheduler). Improves iGPU performance on Kaby Lake and newer using older chipsets without Intel Management Engine v12 support (Z370 and others). `rps-control`property was enabled in WhateverGreen until macOS 10.15.6, in this version it had major issues and, since then, WhateverGreen has disabled it by default.
+- RPS Control (disabled by default): it can be enabled by `rps-control` property (01 as Data) or `igfxrpsc=1` boot arg. It enables RPS control patch (graphics accelerator uses host preemptive scheduler). Improves iGPU performance on Kaby Lake and newer using older chipsets without Intel Management Engine v12 support (Z370 and others). `rps-control`property was enabled in WhateverGreen until macOS 10.15.6, in this version it had major issues and, since then, WhateverGreen has disabled it by default.
 
 Recommendations:
 
 - If the iGPU has normal frequencies and power consumption for that model and the screen works fine >> it is not necessary to use any of the 2 settings
 - Both should not be used at the same time because they are based on different modes of operation
 - `igfxfw` takes precedence over `igfxrpsc` when both are set
-- Boards supporting Intel ME 12 and newer can try `igfxfw=2`
+- Boards supporting Intel ME 12 and newer can try `igfxfw=1`
 - For boards with older chipsets, RPS-Control is an option
 - There are comments of OC developers saying that `rps-control` is better than `igfxfw` (Big Sur and newer) because of the bug that seems to be in Apple GUC.
 
